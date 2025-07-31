@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class DoorArea : MonoBehaviour
 {
-    private DoorPivot doorRotator;
+    private DoorPivot _doorRotator;
 
     private void Start()
     {
-        doorRotator = GetComponentInParent<Door>().GetComponentInChildren<DoorPivot>();
+        _doorRotator = GetComponentInParent<Door>().GetComponentInChildren<DoorPivot>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            doorRotator.playerInArea = true;
+            _doorRotator.playerInArea = true;
         }
     }
 
@@ -21,7 +21,7 @@ public class DoorArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            doorRotator.playerInArea = false;
+            _doorRotator.playerInArea = false;
         }
     }
 }

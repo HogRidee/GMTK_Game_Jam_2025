@@ -5,30 +5,34 @@ public class DoorPivot : MonoBehaviour
     public float openAngle = 85f;
     public float speed = 450f;
 
-    private bool isOpening = false;
-    private float currentAngle = 0f;
+    private bool _isRotating = false;
+    private float _currentAngle = 0f;
+    private bool _isOpen = false;
 
     [HideInInspector] public bool playerInArea = false;
 
     void Update()
     {
-        //Debug.Log($"Player in area: {playerInArea}, Is opening: {isOpening}");
-        if (playerInArea && Input.GetKeyDown(KeyCode.Space) && !isOpening)
+
+        if (playerInArea && Input.GetKeyDown(KeyCode.Space) && !_isRotating)
         {
-            isOpening = true;
+            _isRotating = true;
         }
 
-        if (isOpening && currentAngle < openAngle)
+        if (_isRotating)
         {
             float rotationStep = speed * Time.deltaTime;
-            float angleToRotate = Mathf.Min(rotationStep, openAngle - currentAngle);
+            float angleToRotate = Mathf.Min(rotationStep, openAngle - _currentAngle);
 
-            transform.Rotate(0f, 0f, angleToRotate);
-            currentAngle += angleToRotate;
+            float direction = _isOpen ? -1f : 1f;
+            transform.Rotate(0f, 0f, direction * angleToRotate);
+            _currentAngle += angleToRotate;
 
-            if (currentAngle >= openAngle)
+            if (_currentAngle >= openAngle)
             {
-                isOpening = false;
+                _isRotating = false;
+                _isOpen = !_isOpen;    
+                _currentAngle = 0f;     
             }
         }
     }
