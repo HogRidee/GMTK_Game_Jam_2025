@@ -12,6 +12,7 @@ public class DoorPivot : MonoBehaviour
 
     void Update()
     {
+        Debug.Log($"Player in area: {playerInArea}, Is opening: {isOpening}");
         if (playerInArea && Input.GetKeyDown(KeyCode.Space) && !isOpening)
         {
             isOpening = true;
