@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class DoorPivot : MonoBehaviour
 {
-    public float openAngle = 90f;      
-    public float speed = 100f;         
+    public float openAngle = 85f;
+    public float speed = 450f;
 
     private bool isOpening = false;
     private float currentAngle = 0f;
 
+    [HideInInspector] public bool playerInArea = false;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isOpening)
+        if (playerInArea && Input.GetKeyDown(KeyCode.Space) && !isOpening)
         {
             isOpening = true;
         }
@@ -20,7 +22,7 @@ public class DoorPivot : MonoBehaviour
             float rotationStep = speed * Time.deltaTime;
             float angleToRotate = Mathf.Min(rotationStep, openAngle - currentAngle);
 
-            transform.Rotate(0f, 0f, angleToRotate); 
+            transform.Rotate(0f, 0f, angleToRotate);
             currentAngle += angleToRotate;
 
             if (currentAngle >= openAngle)
