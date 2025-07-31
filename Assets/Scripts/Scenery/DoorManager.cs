@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoorManager
+public class DoorManager : MonoBehaviour
 {
     
 }

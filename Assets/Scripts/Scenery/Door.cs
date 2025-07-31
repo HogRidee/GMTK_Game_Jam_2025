@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Door
+public class Door : MonoBehaviour
 {
     
 }
