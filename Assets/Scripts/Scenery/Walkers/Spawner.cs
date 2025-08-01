@@ -42,7 +42,10 @@ public class Spawner : MonoBehaviour
     private void CreateWalker()
     {
         int walkerNumber = Random.Range(0, _walker.Length);
-        Vector2 AletoryPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        //Vector2 AletoryPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+
+        Transform spawnPoint = _points[Random.Range(0, _points.Length)];
+        Vector2 AletoryPosition = spawnPoint.position;
 
         GameObject newWalker = Instantiate(_walker[walkerNumber], AletoryPosition, Quaternion.identity);
         _activeWalkers.Add(newWalker);
