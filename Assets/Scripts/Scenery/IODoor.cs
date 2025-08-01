@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class IODoor : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Civilian") || other.CompareTag("Thief"))
+        if (collision.gameObject.CompareTag("Civilian") || collision.gameObject.CompareTag("Thief"))
         {
-            Debug.Log("NPC tocó la puerta");
-            Destroy(other.gameObject);
+            Debug.Log("NPC colisionó con la puerta");
+            Destroy(collision.gameObject);
         }
     }
-
 }
+

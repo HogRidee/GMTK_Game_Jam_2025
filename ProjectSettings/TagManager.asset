@@ -8,6 +8,7 @@ TagManager:
   - MayorArea
   - Civilian
   - Thief
+  - IODoor
   layers:
   - Default
   - TransparentFX
