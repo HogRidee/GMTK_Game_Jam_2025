@@ -13,7 +13,7 @@ public class MayorArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered Mayor area.");
+            //Debug.Log("Player entered Mayor area.");
             _mayor.SetPlayerInArea(true, other.transform);
         }
     }
@@ -22,7 +22,7 @@ public class MayorArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player exited Mayor area.");
+            //Debug.Log("Player exited Mayor area.");
             _mayor.SetPlayerInArea(false, null);
         }
     }
