@@ -31,11 +31,11 @@ public class PlayerWhistle : MonoBehaviour
             {
                 if (Mathf.Abs(mayor.transform.position.y - transform.position.y) <= detectionRangeY)
                 {
-                    Debug.Log("Mayor in range, but no action defined.");
+                    //Debug.Log("Mayor in range, but no action defined.");
                 }
                 else
                 {
-                    Debug.Log("Mayor not in range, no action taken.");
+                    //Debug.Log("Mayor not in range, no action taken.");
                 }
             }
         }

@@ -6,7 +6,7 @@ public class IODoor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Civilian") || collision.gameObject.CompareTag("Thief"))
         {
-            Debug.Log("NPC colisionó con la puerta");
+            //Debug.Log("NPC colisionó con la puerta");
             Destroy(collision.gameObject);
         }
     }
