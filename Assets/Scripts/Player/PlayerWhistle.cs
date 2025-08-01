@@ -25,6 +25,19 @@ public class PlayerWhistle : MonoBehaviour
                     thief.FleeToRight();
                 }
             }
+
+            Mayor[] mayors = Object.FindObjectsByType<Mayor>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            foreach (Mayor mayor in mayors)
+            {
+                if (Mathf.Abs(mayor.transform.position.y - transform.position.y) <= detectionRangeY)
+                {
+                    Debug.Log("Mayor in range, but no action defined.");
+                }
+                else
+                {
+                    Debug.Log("Mayor not in range, no action taken.");
+                }
+            }
         }
     }
 }
