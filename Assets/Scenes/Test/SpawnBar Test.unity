@@ -119,6 +119,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &71391964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71391966}
+  - component: {fileID: 71391965}
+  m_Layer: 0
+  m_Name: Spawn Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &71391965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71391964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58af68ba2c92184a8c492a2367d2a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnBarRt: {fileID: 1950337820}
+  spawnIconPrefab: {fileID: 4168029220294160192, guid: 20b19c19528e76b4bb2eac8878551e42, type: 3}
+  leadTime: 5
+  thiefIcon: {fileID: 2881540485564930200, guid: d52b56fb7aaac3c4085d4faeddc7f85f, type: 3}
+  civilianIcon: {fileID: -566589000959496881, guid: 0fd3299f2825f494d8272948d1d88f7f, type: 3}
+  mayorIcon: {fileID: 8160275454824793239, guid: fd9232e303506d84e97829ff9f7cdee1, type: 3}
+--- !u!4 &71391966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71391964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1048.4375, y: 709.189, z: 2.1451366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150504573
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +666,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564705081}
   m_CullTransparentMesh: 1
+--- !u!1 &588001179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588001181}
+  - component: {fileID: 588001180}
+  m_Layer: 0
+  m_Name: Spawn Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &588001180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588001179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b0444455064f54ca4515a25e4aa283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnManager: {fileID: 71391965}
+--- !u!4 &588001181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588001179}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1048.4375, y: 709.189, z: 2.1451366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692033329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,3 +2337,5 @@ SceneRoots:
   - {fileID: 1969340692}
   - {fileID: 1893045117}
   - {fileID: 699178027}
+  - {fileID: 71391966}
+  - {fileID: 588001181}

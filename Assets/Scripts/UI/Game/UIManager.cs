@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
         {
             pauseBehavior.PauseGame();
         }
-        DecrementTimeBar();
+        // DecrementTimeBar();
     }
 
     private void DecrementTimeBar()

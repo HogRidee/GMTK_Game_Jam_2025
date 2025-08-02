@@ -23,6 +23,11 @@ public class SpawnManager : MonoBehaviour
     [Header("Spawner")]
     // [SerializeField] private NPCSpawner npcSpawner;
 
+    [Header("Icon Sprites")]
+    [SerializeField] private Sprite thiefIcon;
+    [SerializeField] private Sprite civilianIcon;
+    [SerializeField] private Sprite mayorIcon;
+    
     private List<SpawnData> queue = new List<SpawnData>();
 
     void Update()
@@ -67,6 +72,17 @@ public class SpawnManager : MonoBehaviour
 
     Sprite GetSpriteForType(SpawnType type)
     {
-        return null;
+        switch (type)
+        {
+            case SpawnType.Thief:
+                return thiefIcon;
+            case SpawnType.Civilian:
+                return civilianIcon;
+            case SpawnType.Mayor:
+                return mayorIcon;
+            default:
+                Debug.LogWarning($"Sprite not defined for {type}");
+                return null;
+        }
     }
 }
