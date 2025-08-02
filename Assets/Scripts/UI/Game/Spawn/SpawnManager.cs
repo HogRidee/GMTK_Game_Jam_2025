@@ -32,27 +32,32 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
-        float now   = Time.time;
+        float now = Time.time;
         float halfW = spawnBarRt.rect.width * 0.5f;
         for (int i = queue.Count - 1; i >= 0; i--)
         {
-            var sd   = queue[i];
+            var sd = queue[i];
             float tRem = sd.SpawnTime - now;
-
+            if (tRem <= leadTime)
+            {
+                if (!sd.IconRt.gameObject.activeSelf)
+                {
+                    sd.IconRt.gameObject.SetActive(true);
+                    sd.IconRt.anchoredPosition = new Vector2(+halfW, 0);
+                }
+                float norm = Mathf.Clamp01(tRem / leadTime);
+                float x = Mathf.Lerp(-halfW, +halfW, norm);
+                sd.IconRt.anchoredPosition = new Vector2(x, 0);
+            }
             if (tRem <= 0f)
             {
                 // npcSpawner.RequestSpawn(sd.Type);
                 Destroy(sd.IconRt.gameObject);
                 queue.RemoveAt(i);
             }
-            else
-            {
-                float norm = Mathf.Clamp01(tRem / leadTime);
-                float x     = Mathf.Lerp(-halfW, +halfW, norm);
-                sd.IconRt.anchoredPosition = new Vector2(x, 0);
-            }
         }
     }
+
     
     public void ScheduleSpawn(SpawnType type, float delay)
     {
@@ -63,6 +68,7 @@ public class SpawnManager : MonoBehaviour
         iconRt.anchoredPosition = new Vector2(+halfW, 0);
         var img = iconGO.GetComponent<Image>();
         img.sprite = GetSpriteForType(type);
+        iconGO.SetActive(false);
         queue.Add(new SpawnData {
             Type      = type,
             SpawnTime = tSpawn,
