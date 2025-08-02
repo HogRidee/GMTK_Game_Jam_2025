@@ -8,6 +8,7 @@ public class SpawnTrigger : MonoBehaviour
     void Start()
     {
         spawnManager.ScheduleSpawn(SpawnType.Civilian, 5f);
-        spawnManager.ScheduleSpawn(SpawnType.Mayor, 12f);
+        spawnManager.ScheduleSpawn(SpawnType.Mayor, 6f);
+        spawnManager.ScheduleSpawn(SpawnType.Thief, 7f);
     }
 }

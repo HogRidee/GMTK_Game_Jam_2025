@@ -546,6 +546,9 @@ MonoBehaviour:
   spawnBarRt: {fileID: 1856659203}
   spawnIconPrefab: {fileID: 4168029220294160192, guid: 20b19c19528e76b4bb2eac8878551e42, type: 3}
   leadTime: 5
+  civilianSpawner: {fileID: 1127697455}
+  thiefSpawner: {fileID: 1975720663}
+  mayorSpawner: {fileID: 602335840}
   thiefIcon: {fileID: 2881540485564930200, guid: d52b56fb7aaac3c4085d4faeddc7f85f, type: 3}
   civilianIcon: {fileID: -566589000959496881, guid: 0fd3299f2825f494d8272948d1d88f7f, type: 3}
   mayorIcon: {fileID: 8160275454824793239, guid: fd9232e303506d84e97829ff9f7cdee1, type: 3}
