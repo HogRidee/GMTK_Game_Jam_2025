@@ -126,6 +126,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -384,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_0: 2881540485564930200
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_1: -6601948545732279641
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_10: -9201636718213215839
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_2: -298235065291646593
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_3: -2008074781474370381
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_4: -244474998888414526
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_5: -4288923105149062648
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_6: -909000344756130514
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_7: 1462836862399601633
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_8: 3873063221852408318
+      pngtree-burglar-icon-simple-vector-isolated-picture-image_8043786_9: 8573834452966523374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
