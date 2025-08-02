@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject[] _walker;
     [SerializeField] private float _timeWalker;
 
-    private float _nextTimeWalker;
+    //private float _nextTimeWalker;
 
     [SerializeField] private int _maxWalkerInScene;
     private List<GameObject> _activeWalkers = new List<GameObject>();
@@ -22,14 +22,6 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
-        _nextTimeWalker += Time.deltaTime;
-        if (_nextTimeWalker >= _timeWalker)
-        {
-            _nextTimeWalker = 0;
-            if (_activeWalkers.Count < _maxWalkerInScene)
-                CreateWalker();
-        }
-
         for (int i = _activeWalkers.Count - 1; i >= 0; i--)
         {
             if (_activeWalkers[i] == null)
@@ -39,7 +31,7 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    private void CreateWalker()
+    public void CreateWalker()
     {
         int walkerNumber = Random.Range(0, _walker.Length);
         //Vector2 AletoryPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));

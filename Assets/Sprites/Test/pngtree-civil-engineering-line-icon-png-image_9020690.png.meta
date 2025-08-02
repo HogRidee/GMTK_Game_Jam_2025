@@ -126,6 +126,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -384,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pngtree-civil-engineering-line-icon-png-image_9020690_0: -200157475332324905
+      pngtree-civil-engineering-line-icon-png-image_9020690_1: 6071541787084892013
+      pngtree-civil-engineering-line-icon-png-image_9020690_10: 4407648719039765815
+      pngtree-civil-engineering-line-icon-png-image_9020690_2: -4345353725632807986
+      pngtree-civil-engineering-line-icon-png-image_9020690_3: 7146586048170775934
+      pngtree-civil-engineering-line-icon-png-image_9020690_4: 8709971236957694627
+      pngtree-civil-engineering-line-icon-png-image_9020690_5: 6282958665289783369
+      pngtree-civil-engineering-line-icon-png-image_9020690_6: -7931905446673266409
+      pngtree-civil-engineering-line-icon-png-image_9020690_7: 7469713054463127296
+      pngtree-civil-engineering-line-icon-png-image_9020690_8: 6144833469891284365
+      pngtree-civil-engineering-line-icon-png-image_9020690_9: -2437087248219876376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

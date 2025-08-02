@@ -20,8 +20,10 @@ public class SpawnManager : MonoBehaviour
     [Header("Lead Time")]
     [SerializeField] private float leadTime = 5f;
 
-    [Header("Spawner")]
-    // [SerializeField] private NPCSpawner npcSpawner;
+    [Header("Spawner References")]
+    [SerializeField] private Spawner civilianSpawner;
+    [SerializeField] private Spawner thiefSpawner;
+    [SerializeField] private Spawner mayorSpawner;
 
     [Header("Icon Sprites")]
     [SerializeField] private Sprite thiefIcon;
@@ -51,7 +53,19 @@ public class SpawnManager : MonoBehaviour
             }
             if (tRem <= 0f)
             {
-                // npcSpawner.RequestSpawn(sd.Type);
+                switch (sd.Type)
+                {
+                    case SpawnType.Civilian:
+                        civilianSpawner.CreateWalker();
+                        break;
+                    case SpawnType.Thief:
+                        thiefSpawner.CreateWalker();
+                        break;
+                    case SpawnType.Mayor:
+                        mayorSpawner.CreateWalker();
+                        break;
+                }
+
                 Destroy(sd.IconRt.gameObject);
                 queue.RemoveAt(i);
             }
