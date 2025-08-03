@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1000572250423132121}
   - component: {fileID: 1696573667560251408}
-  - component: {fileID: 2212969495991993264}
   - component: {fileID: 8043889042623687411}
   - component: {fileID: 7549572774090328987}
+  - component: {fileID: 9096177124099636907}
   m_Layer: 7
-  m_Name: Civilian
+  m_Name: Resident Civilian
   m_TagString: Civilian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,20 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2212969495991993264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7749923490496763279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abcd2afc3e2b908419143335326f68fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _baseSpeed: 1.5
-  _residentPrefab: {fileID: 7749923490496763279, guid: eff2ec54654ddc342a0b05cc7f3d6a9f, type: 3}
 --- !u!50 &8043889042623687411
 Rigidbody2D:
   serializedVersion: 5
@@ -165,7 +151,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.0062233023}
+  m_Offset: {x: 0, y: -0.004445225}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -175,5 +161,19 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.24755338}
+  m_Size: {x: 0.1, y: 0.25110954}
   m_EdgeRadius: 0
+--- !u!114 &9096177124099636907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749923490496763279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6ea1982d1ce6a4d86817c4c084e25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.75
+  changeDirectionTime: 2.5
