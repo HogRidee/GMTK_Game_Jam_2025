@@ -31,7 +31,7 @@ public class NeighborhoodController : MonoBehaviour
     {
         _residentCount++;
         TotalEnteredCivilians++;
-        //Debug.Log($"[Neighborhood] Civiles activos: {_residentCount} | Total acumulado: {TotalEnteredCivilians}");
+        Debug.Log($"[Neighborhood] Civiles activos: {_residentCount} | Total acumulado: {TotalEnteredCivilians}");
     }
 
     public void UnregisterResident()
