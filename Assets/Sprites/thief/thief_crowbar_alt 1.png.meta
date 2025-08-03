@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 79ae9b8e08374e449b114f105156d809
+guid: c7d59c4848981cc43bb27e40102a0f9a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,10 +103,10 @@ TextureImporter:
       name: thief_crowbar_alt_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 5
-        width: 108
-        height: 100
+        x: 23
+        y: 11
+        width: 100
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
