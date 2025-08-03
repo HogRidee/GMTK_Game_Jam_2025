@@ -4,7 +4,7 @@ public class NeighborhoodController : MonoBehaviour
 {
     public static NeighborhoodController Instance { get; private set; }
 
-    [SerializeField] private int _maxResidents = 35;
+    [SerializeField] private int _maxResidents = 17;
 
     private int _residentCount = 0;
 
