@@ -46,4 +46,10 @@ public class ResidentCivilian : MonoBehaviour
         float y = Random.Range(-1f, 1f);
         moveDirection = new Vector2(x, y).normalized;
     }
+
+    void OnDestroy()
+    {
+        if (NeighborhoodController.Instance != null)
+            NeighborhoodController.Instance.UnregisterResident();
+    }
 }

@@ -32,12 +32,17 @@ public class Civilian : MonoBehaviour
     {
         if (other.CompareTag("Neighborhood"))
         {
-            Vector2 centerPos = other.bounds.center;
-            GameObject newResident = Instantiate(_residentPrefab, centerPos, Quaternion.identity);
+            if (NeighborhoodController.Instance != null && NeighborhoodController.Instance.CanSpawnResident())
+            {
+                Vector2 centerPos = other.bounds.center;
+                GameObject newResident = Instantiate(_residentPrefab, centerPos, Quaternion.identity);
 
-            ResidentCivilian resident = newResident.GetComponent<ResidentCivilian>();
-            if (resident != null)
-                resident.SetAreaBounds(other.bounds);
+                ResidentCivilian resident = newResident.GetComponent<ResidentCivilian>();
+                if (resident != null)
+                    resident.SetAreaBounds(other.bounds);
+
+
+            }         
             Destroy(gameObject);
         }
     }
