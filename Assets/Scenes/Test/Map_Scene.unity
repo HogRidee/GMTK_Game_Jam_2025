@@ -183,7 +183,7 @@ Transform:
   m_GameObject: {fileID: 169619330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4684, y: -4.946, z: 0.054549284}
+  m_LocalPosition: {x: -1.4684, y: -4.92, z: 0.054549284}
   m_LocalScale: {x: 0.5233, y: 0.9440237, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 468921793}
   m_Layer: 0
   m_Name: Buildings
-  m_TagString: Untagged
+  m_TagString: Neighborhood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -909,8 +909,8 @@ Transform:
   m_GameObject: {fileID: 468921792}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.4044, y: -0.15249, z: 0}
+  m_LocalScale: {x: 1.23, y: 0.87, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 256265424}
@@ -1823,6 +1823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnManager: {fileID: 866983933}
+  _minDelay: 5
+  _extraRandomDelay: 3
 --- !u!4 &891551702
 Transform:
   m_ObjectHideFlags: 0
@@ -3690,7 +3692,7 @@ RectTransform:
   m_GameObject: {fileID: 1856659202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.84003, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1019883178}

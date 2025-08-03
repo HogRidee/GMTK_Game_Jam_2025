@@ -31,8 +31,8 @@ public class SpawnTrigger : MonoBehaviour
     private SpawnType GetWeightedRandomSpawnType()
     {
         int mayorWeight = 1;
-        int civilianWeight = 3;
-        int thiefWeight = 4;
+        int civilianWeight = 6;
+        int thiefWeight = 7;
 
         int total = mayorWeight + civilianWeight + thiefWeight;
         int rand = Random.Range(0, total);

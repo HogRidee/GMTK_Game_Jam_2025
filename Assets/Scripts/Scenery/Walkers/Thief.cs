@@ -36,7 +36,16 @@ public class Thief : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
 
+        if (other.CompareTag("DoorArea"))
+        {
+            Debug.Log("GAME OVER");
+            // Add game over logic here, such as showing a game over screen or resetting the game
+            UnityEditor.EditorApplication.isPlaying = false; // For Unity Editor, use this line to stop play mode
+        }
+    }
     public void FleeToRight()
     {
         _currentSpeed = _baseSpeed * 0.5f;
