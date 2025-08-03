@@ -3,6 +3,7 @@ using UnityEngine;
 public class Civilian : MonoBehaviour
 {
     [SerializeField] private float _baseSpeed = 10f;
+    [SerializeField] private GameObject _residentPrefab;
     private float _currentSpeed;
 
     void Start()
@@ -25,5 +26,24 @@ public class Civilian : MonoBehaviour
     public void BoostSpeed()
     {
         _currentSpeed = _baseSpeed * 2f;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Neighborhood"))
+        {
+            if (NeighborhoodController.Instance != null && NeighborhoodController.Instance.CanSpawnResident())
+            {
+                Vector2 centerPos = other.bounds.center;
+                GameObject newResident = Instantiate(_residentPrefab, centerPos, Quaternion.identity);
+
+                ResidentCivilian resident = newResident.GetComponent<ResidentCivilian>();
+                if (resident != null)
+                    resident.SetAreaBounds(other.bounds);
+
+
+            }         
+            Destroy(gameObject);
+        }
     }
 }

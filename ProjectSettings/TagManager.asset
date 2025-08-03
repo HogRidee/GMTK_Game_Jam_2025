@@ -9,6 +9,7 @@ TagManager:
   - Civilian
   - Thief
   - IODoor
+  - Neighborhood
   layers:
   - Default
   - TransparentFX
