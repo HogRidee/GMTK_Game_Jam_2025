@@ -43,7 +43,8 @@ public class Thief : MonoBehaviour
         {
             Debug.Log("GAME OVER");
             // Add game over logic here, such as showing a game over screen or resetting the game
-            UnityEditor.EditorApplication.isPlaying = false; // For Unity Editor, use this line to stop play mode
+            //UnityEditor.EditorApplication.isPlaying = false; // For Unity Editor, use this line to stop play mode
+            Application.Quit();
         }
     }
     public void FleeToRight()
